@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Soret-Jkuat Church</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="admin-nav">
+            <h2>Admin Dashboard</h2>
+            <ul>
+                <li><a href="#leadership" class="active">Leadership</a></li>
+                <li><a href="#members">Members</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><button onclick="logout()" class="btn secondary">Logout</button></li>
+            </ul>
+        </nav>
+
+        <main class="admin-main">
+            <section id="leadership" class="admin-section">
+                <h2>Leadership Management</h2>
+                <div class="leadership-form">
+                    <h3>Add/Edit Leadership Position</h3>
+                    <form id="leadership-form">
+                        <div class="form-group">
+                            <label for="position">Position</label>
+                            <select id="position" name="position" required>
+                                <option value="">Select Position</option>
+                                <option value="Chairperson">Chairperson</option>
+                                <option value="Vice Chairperson">Vice Chairperson</option>
+                                <option value="Secretary">Secretary</option>
+                                <option value="Treasurer">Treasurer</option>
+                                <option value="Worship Leader">Worship Leader</option>
+                                <option value="Outreach Coordinator">Outreach Coordinator</option>
+                                <option value="Youth Leader">Youth Leader</option>
+                                <option value="Prayer Coordinator">Prayer Coordinator</option>
+                                <option value="Communications Officer">Communications Officer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="current-leader-name">Current Leader Name</label>
+                            <input type="text" id="current-leader-name" name="currentLeader.name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="current-leader-image">Leader Image URL</label>
+                            <input type="text" id="current-leader-image" name="currentLeader.image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="start-date">Start Date</label>
+                            <input type="date" id="start-date" name="currentLeader.startDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Add Past Leader</label>
+                            <div class="past-leader-inputs">
+                                <input type="text" placeholder="Name" class="past-leader-name">
+                                <input type="date" placeholder="Start Date" class="past-leader-start">
+                                <input type="date" placeholder="End Date" class="past-leader-end">
+                                <button type="button" class="btn secondary" onclick="addPastLeader()">Add</button>
+                            </div>
+                        </div>
+                        <div id="past-leaders-list" class="past-leaders-list">
+                            <!-- Past leaders will be added here -->
+                        </div>
+                        <button type="submit" class="btn primary">Save Position</button>
+                    </form>
+                </div>
+                <div class="leadership-list">
+                    <h3>Current Leadership</h3>
+                    <div id="leadership-positions">
+                        <!-- Leadership positions will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="members" class="admin-section" style="display: none;">
+                <h2>Member Management</h2>
+                <div class="member-filters">
+                    <input type="text" id="member-search" placeholder="Search members...">
+                    <select id="member-role">
+                        <option value="">All Roles</option>
+                        <option value="member">Member</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div class="members-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Role</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="members-table">
+                            <!-- Members will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="settings" class="admin-section" style="display: none;">
+                <h2>Settings</h2>
+                <div class="settings-form">
+                    <h3>Website Settings</h3>
+                    <form id="settings-form">
+                        <div class="form-group">
+                            <label for="church-name">Church Name</label>
+                            <input type="text" id="church-name" name="churchName" value="Soret-Jkuat Church">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Contact Email</label>
+                            <input type="email" id="contact-email" name="contactEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Contact Phone</label>
+                            <input type="tel" id="contact-phone" name="contactPhone">
+                        </div>
+                        <button type="submit" class="btn primary">Save Settings</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html> 

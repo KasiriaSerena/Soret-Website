@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soret-Jkuat Church</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Soret-Jkuat Church</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#leaders">Leadership</a>
+            <a href="#services">Services</a>
+            <a href="#events">Events</a>
+            <a href="#media">Media</a>
+            <a href="#give">Give</a>
+            <a href="#contact">Contact</a>
+            <a href="login.html" class="btn primary">Login</a>
+        </div>
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Grace Community Church</h1>
+            <p>Join us in worship and fellowship</p>
+            <div class="cta-buttons">
+                <a href="#services" class="btn primary">Join Us</a>
+                <a href="#media" class="btn secondary">Watch Live</a>
+            </div>
+        </div>
+        <div class="announcements">
+            <h2>Upcoming Events</h2>
+            <div class="announcement-card">
+                <h3>Sunday Service</h3>
+                <p>9:00 AM & 11:00 AM</p>
+                <p>Join us for worship and fellowship</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>To spread the love of Christ and build a community of believers.</p>
+            </div>
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>To be a beacon of hope and transformation in our community.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-schedule">
+            <div class="service-card">
+                <h3>Sunday Morning Service</h3>
+                <p>9:00 AM - 10:30 AM</p>
+                <p>Main Sanctuary</p>
+            </div>
+            <div class="service-card">
+                <h3>Sunday Evening Service</h3>
+                <p>6:00 PM - 7:30 PM</p>
+                <p>Main Sanctuary</p>
+            </div>
+        </div>
+        <div class="next-service">
+            <h3>Next Service In:</h3>
+            <div class="countdown" id="countdown"></div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <div class="events-calendar">
+            <!-- Events will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" class="media">
+        <h2>Media Library</h2>
+        <div class="media-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="sermons">Sermons</button>
+            <button class="filter-btn" data-filter="worship">Worship</button>
+        </div>
+        <div class="media-grid">
+            <!-- Media items will be dynamically loaded here -->
+        </div>
+    </section>
+    <!--leaders-->
+    <section id="leaders" class="leaders">
+        <h2>Our Leadership</h2>
+        <div class="leadership-grid">
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="images/chairperson.jpg" alt="Chairperson">
+                </div>
+                <div class="leader-info">
+                    <h3>Chairperson</h3>
+                    <h4>Current Leader</h4>
+                    <p>John Doe</p>
+                    <div class="past-leaders">
+                        <h5>Past Leaders</h5>
+                        <ul>
+                            <li>Jane Smith (2022-2023)</li>
+                            <li>Michael Brown (2021-2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="images/vice-chair.jpg" alt="Vice Chairperson">
+                </div>
+                <div class="leader-info">
+                    <h3>Vice Chairperson</h3>
+                    <h4>Current Leader</h4>
+                    <p>Sarah Johnson</p>
+                    <div class="past-leaders">
+                        <h5>Past Leaders</h5>
+                        <ul>
+                            <li>David Wilson (2022-2023)</li>
+                            <li>Emily Davis (2021-2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="images/secretary.jpg" alt="Secretary">
+                </div>
+                <div class="leader-info">
+                    <h3>Secretary</h3>
+                    <h4>Current Leader</h4>
+                    <p>Robert Taylor</p>
+                    <div class="past-leaders">
+                        <h5>Past Leaders</h5>
+                        <ul>
+                            <li>Lisa Anderson (2022-2023)</li>
+                            <li>James Wilson (2021-2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="images/treasurer.jpg" alt="Treasurer">
+                </div>
+                <div class="leader-info">
+                    <h3>Treasurer</h3>
+                    <h4>Current Leader</h4>
+                    <p>Mary Williams</p>
+                    <div class="past-leaders">
+                        <h5>Past Leaders</h5>
+                        <ul>
+                            <li>Thomas Clark (2022-2023)</li>
+                            <li>Patricia White (2021-2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="images/worship.jpg" alt="Worship Leader">
+                </div>
+                <div class="leader-info">
+                    <h3>Worship Leader</h3>
+                    <h4>Current Leader</h4>
+                    <p>Daniel Miller</p>
+                    <div class="past-leaders">
+                        <h5>Past Leaders</h5>
+                        <ul>
+                            <li>Jennifer Lee (2022-2023)</li>
+                            <li>Christopher Hall (2021-2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="images/outreach.jpg" alt="Outreach Coordinator">
+                </div>
+                <div class="leader-info">
+                    <h3>Outreach Coordinator</h3>
+                    <h4>Current Leader</h4>
+                    <p>Elizabeth Brown</p>
+                    <div class="past-leaders">
+                        <h5>Past Leaders</h5>
+                        <ul>
+                            <li>Matthew Green (2022-2023)</li>
+                            <li>Amanda King (2021-2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="images/youth.jpg" alt="Youth Leader">
+                </div>
+                <div class="leader-info">
+                    <h3>Youth Leader</h3>
+                    <h4>Current Leader</h4>
+                    <p>Kevin Martinez</p>
+                    <div class="past-leaders">
+                        <h5>Past Leaders</h5>
+                        <ul>
+                            <li>Rachel Scott (2022-2023)</li>
+                            <li>Brian Adams (2021-2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="images/prayer.jpg" alt="Prayer Coordinator">
+                </div>
+                <div class="leader-info">
+                    <h3>Prayer Coordinator</h3>
+                    <h4>Current Leader</h4>
+                    <p>Susan Turner</p>
+                    <div class="past-leaders">
+                        <h5>Past Leaders</h5>
+                        <ul>
+                            <li>Mark Phillips (2022-2023)</li>
+                            <li>Laura Baker (2021-2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="images/communications.jpg" alt="Communications Officer">
+                </div>
+                <div class="leader-info">
+                    <h3>Communications Officer</h3>
+                    <h4>Current Leader</h4>
+                    <p>Richard Parker</p>
+                    <div class="past-leaders">
+                        <h5>Past Leaders</h5>
+                        <ul>
+                            <li>Nicole Young (2022-2023)</li>
+                            <li>Steven Carter (2021-2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Give Section -->
+    <section id="give" class="give">
+        <h2>Give</h2>
+        <div class="giving-options">
+            <div class="give-card">
+                <h3>Online Giving</h3>
+                <p>Secure and convenient way to support our ministry</p>
+                <button class="btn primary">Donate Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <form id="contact-form" class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@gracechurch.org</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Church Street, City, State</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2024 Grace Community Church. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</html>
